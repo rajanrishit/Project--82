@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View,Stylesheet,Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { RFValue } from "react-native-responsive-fontsize";
 
 
 export default class PostCard extends Component {
+   constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
+    componentDidMount() { }
+ 
+ 
+ 
  render() {
   return (
     <View style ={styles.container}>
@@ -70,5 +79,19 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     flex: 0.85
-  }
+  },
+ likeButton: {
+        width: RFValue(160),
+        height: RFValue(40),
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "row",
+        backgroundColor: "#eb3948",
+        borderRadius: RFValue(30)
+    },
+    likeText: {
+        color: "white",
+        fontSize: RFValue(25),
+        marginLeft: RFValue(5)
+    }
 });
